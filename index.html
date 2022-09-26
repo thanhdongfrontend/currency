@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+    <link rel="icon" href="./assets/img/coin.png">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="app-wrapper">
+            <header class="app-header">
+                 <h3 class="app-heading">
+                    Exchange Rate and Converter
+                </h3>
+            </header>
+
+            <div class="app-content">
+                <div class="converter">
+                    <form class="converter-form" onsubmit="converter()">
+                        <div class="converter-header">
+                            <img src="./assets/img/equal.png" alt="converter-image" class="converter-img">
+                            <h3>Converter</h3>
+                        </div>
+                        <label for="from">From Currency</label>
+                        <input id="from" type="text" >
+                        <label for="to">To Currency</label>
+                        <input id="to" type="text" >
+                        <label for="date">Date</label>
+                        <input type="date" id="date" >
+                        <label for="amount">Amount</label>
+                        <input type="text" id="amount" >
+                        <label for="result">Result:</label>
+                        <span id="result">........</span>
+                        <button class="btn-convert" type="button" id="submit-btn">Convert</button>
+                    </form>
+                    
+                </div>
+                <div class="chart-container">
+                    <nav class="chart-nav">
+                        <div class="base-currency-selection">
+                            <span class="base-title">Base: </span>
+                            <span id="selected-base" class="selected-base-currency">
+                                USD
+                            </span>
+                            <i id="arrowBase" class="arrowBase-icon fa-sharp fa-solid fa-angle-right"></i>
+                            <ul id="base-list" class="base-currency-list">
+                                <li class="base-currency-items">
+                                    <span>USD</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>EUR</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>JPY</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>GBP</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>AUD</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>CAD</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>CNY</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>HKD</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>NZD</span>
+                                </li> 
+                                <li class="base-currency-items">
+                                    <span>VND</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="chart-title">Timeframe of exchange rate</span>
+                        <div class="targer-currency-selection">
+                            <span class="target-title">Target: </span>
+                            <span id="selected-target" class="selected-target-currency">
+                                VND
+                            </span>
+                            <i id="arrowTarget" class="arrowTarget-icon fa-sharp fa-solid fa-angle-right"></i>
+                            <ul id="target-list" class="target-currency-list">
+                                <li class="target-currency-items">
+                                    <span>USD</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>EUR</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>JPY</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>GBP</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>AUD</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>CAD</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>CNY</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>HKD</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>NZD</span>
+                                </li>
+                                <li class="target-currency-items">
+                                    <span>VND</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div id="showChart">
+                        <div id="viewChart" class="chart-area">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-footer">
+                        <span id="30days" class="btn">30 Days</span>
+                        <span id="90days" class="btn">3 Months</span>
+                        <span id="180days" class="btn">6 Months</span>
+                        <span id="366days" class="btn">1 Year</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

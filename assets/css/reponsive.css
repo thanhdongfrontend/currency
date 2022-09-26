@@ -1,0 +1,91 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .page-wrapper {
+        width: unset;
+        height: unset;
+    }
+
+    .app-wrapper {
+        height: unset;
+        width: unset;
+    }
+
+    .app-content {
+        flex-direction: column;
+    }
+    .converter {
+        width: 100%;
+    }
+    .app-wrapper {
+        min-height: 100vh;
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        border-radius: unset;
+    }
+    .app-header {
+        border-radius: unset;
+    }
+    .converter {
+        margin: unset;
+        border-radius: unset;
+        padding-bottom: 12px;
+    }
+    .chart-container {
+        width: 100%;
+        margin: unset;
+        border-radius: unset;
+    }
+  
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .app-wrapper {
+        min-height: 100vh;
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        border-radius: unset;
+    }
+    .app-header {
+        border-radius: unset;
+    }
+    .converter {
+        margin: unset;
+        border-radius: unset;
+        padding-bottom: 12px;
+    }
+    .chart-container {
+        width: 100%;
+        margin: unset;
+        border-radius: unset;
+        padding: 12px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .app-header {
+        display: none   ;
+    }
+    .chart-title {
+        display: none;
+    }
+    .base-title, .target-title {
+        font-size: 20px;
+    }
+    .chart-nav {
+        height: 50px;
+    }
+    .chart-container {
+        padding: 0 12px 12px 12px;
+    }
+    .chart-area {
+        margin: 12px 0 0 0;
+    }
+    .chart-footer {
+        margin: 12px 0;
+    }
+}
